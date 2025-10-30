@@ -1,7 +1,11 @@
 *{
     padding: 0;
     margin: 0;
-    font
+
+  font-family: 'Montserrat', sans-serif;
+
+
+
 }
 
 body{
@@ -11,7 +15,7 @@ body{
 .app{
     width: 90%;
     max-width: 28rem;
-    height: 30rem;
+    height: 35rem;
     background: linear-gradient( rgb(241, 99, 99),rgb(116, 154, 248));
     margin: 5rem auto 2rem;
     border-radius: 1rem;
@@ -39,11 +43,12 @@ border-bottom: 0.1rem solid rgb(73, 73, 199);
 .ans button{
     height: 2rem;
     border: none;
-    border-radius: 0.2rem;
-    margin: 0 0.5rem ;
+    border-radius: 0.3rem;
+    margin: 0 0.8rem ;
     text-align: left;
     padding: 0 1rem;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .quiz{
@@ -53,3 +58,24 @@ border-bottom: 0.1rem solid rgb(73, 73, 199);
     margin: 2rem 0.5rem;
 }
 
+#ans:hover{
+    background: black;
+    color: white;
+    font-weight: 650;
+}
+
+#next{
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 0.3rem;
+    background: rgb(198, 83, 83);
+    margin: 1rem auto 0 ;
+    display: block;
+    cursor: pointer;
+}
+
+#next:active{
+    background: rgb(132, 25, 25);
+    color: white;
+    
+}
