@@ -34,12 +34,18 @@ border-bottom: 0.1rem solid rgb(73, 73, 199);
 }
 
 .ans{
-    margin-top:2rem ;
+    height: 40vh;
+    min-height: 25vh;
+    max-height: 25vh;
+        margin-top:2rem ;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    
 }
-
+/* .ans-btn{
+    display: none;
+} */
 .ans button{
     height: 2rem;
     border: none;
@@ -49,6 +55,7 @@ border-bottom: 0.1rem solid rgb(73, 73, 199);
     padding: 0 1rem;
     cursor: pointer;
     font-weight: 600;
+    
 }
 
 .quiz{
@@ -58,7 +65,7 @@ border-bottom: 0.1rem solid rgb(73, 73, 199);
     margin: 2rem 0.5rem;
 }
 
-#ans:hover{
+.ans-btn:hover{
     background: black;
     color: white;
     font-weight: 650;

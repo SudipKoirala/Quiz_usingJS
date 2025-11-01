@@ -92,9 +92,10 @@ const questionSet = [
 
 ]
 
-const questionElement = document.getElementsByClassName("question");
-const ansElement = document.getElementsByClassName("ans");
-const nextButton = document.getElementById("next");
+const questionElement = document.querySelector("#question");
+const ansElement = document.querySelector(".ans");
+
+const nextButton = document.querySelectorAll("#next");
 
 let score = 0;
 let currquestionIndex = 0;
@@ -109,7 +110,17 @@ showQuestion();
 const showQuestion = (()=>{
 let currentQuestion = questionSet[currquestionIndex];
 let questionNo = currquestionIndex + 1;
-questionElement.innerHTML = `${questionNo} . ${currentQuestion.question} `
+questionElement.innerHTML = questionNo + ". " +currentQuestion.question;
+currentQuestion.ans.forEach(answer=>{
+    const ansBtn = document.createElement("button");
+    ansBtn.innerHTML=answer.text;
+    ansBtn.classList.add ("ans-btn");
+    // ansBtn.style.display = "block";
+ansElement.appendChild(ansBtn);
 
 
 })
+
+})
+
+startQuiz();
