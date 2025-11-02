@@ -1,88 +1,103 @@
-*{
+* {
     padding: 0;
     margin: 0;
 
-  font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
 
 
 }
 
-body{
+body {
     background: rgb(209, 59, 59);
 }
 
-.app{
+.app {
     width: 90%;
     max-width: 28rem;
     height: 35rem;
-    background: linear-gradient( rgb(241, 99, 99),rgb(116, 154, 248));
+    background: linear-gradient(rgb(241, 99, 99), rgb(116, 154, 248));
     margin: 5rem auto 2rem;
     border-radius: 1rem;
     padding: 1.5rem;
 }
 
-.app h1{
+.app h1 {
     font-size: 2.5rem;
-font-weight: 800;
-padding: 1.5rem 1.5rem;
-border-bottom: 0.1rem solid rgb(73, 73, 199);
+    font-weight: 800;
+    padding: 1.5rem 1.5rem;
+    border-bottom: 0.1rem solid rgb(73, 73, 199);
 }
 
-.app h2{
-    padding-left: 1rem;
+.app h2 {
+    padding: 0 1rem 1rem;
+    font-size: 1.4rem;
 }
 
-.ans{
-    height: 40vh;
-    min-height: 25vh;
-    max-height: 25vh;
-        margin-top:2rem ;
+.ans {
+    height: 30vh;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    
+
 }
-/* .ans-btn{
-    display: none;
-} */
-.ans button{
+
+.ans button {
     height: 2rem;
-    border: none;
+    border: 1px solid;
     border-radius: 0.3rem;
-    margin: 0 0.8rem ;
+    margin: 0 0.8rem;
     text-align: left;
     padding: 0 1rem;
     cursor: pointer;
     font-weight: 600;
-    
+    box-shadow: 2px 2px 5px gray;
 }
 
-.quiz{
-    background:rgb(255, 255, 255, 0.3);
+.quiz {
+
+    min-height: 25vh;
+    max-height: 40vh;
+    background: rgb(255, 255, 255, 0.3);
     border-radius: 1rem;
-    padding:1.3rem 0;
+    padding: 1.3rem 0;
     margin: 2rem 0.5rem;
 }
 
-.ans-btn:hover{
-    background: black;
+.ans-btn:hover {
+    background: rgb(107, 97, 97);
     color: white;
     font-weight: 650;
+    border: none;
 }
 
-#next{
+#next {
     padding: 0.5rem 0.8rem;
     border: none;
     border-radius: 0.3rem;
     background: rgb(198, 83, 83);
-    margin: 1rem auto 0 ;
+    margin: 1rem auto 0;
     display: block;
     cursor: pointer;
 }
 
-#next:active{
+#next:active {
     background: rgb(132, 25, 25);
     color: white;
-    
+
 }
+
+.correct {
+    background: #9aeabc;
+
+}
+
+.incorrect {
+    background: #ff9393;
+}
+/* 
+.disabled {
+    pointer-events: none; /* prevents clicking and hover */
+          /* optional: show it visually disabled */
+} */

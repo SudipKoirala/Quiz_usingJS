@@ -94,13 +94,12 @@ const questionSet = [
 
 const questionElement = document.querySelector("#question");
 const ansElement = document.querySelector(".ans");
-
-const nextButton = document.querySelectorAll("#next");
+const nextButton = document.querySelector("#next");
 
 let score = 0;
 let currquestionIndex = 0;
 
-const startQuiz = (()=>{
+const startQuiz = (()=>{ 
 currquestionIndex = 0;
 score= 0;
 nextButton.innerHTML = "Next";
@@ -108,6 +107,7 @@ showQuestion();
 })
 
 const showQuestion = (()=>{
+reset();
 let currentQuestion = questionSet[currquestionIndex];
 let questionNo = currquestionIndex + 1;
 questionElement.innerHTML = questionNo + ". " +currentQuestion.question;
@@ -115,12 +115,39 @@ currentQuestion.ans.forEach(answer=>{
     const ansBtn = document.createElement("button");
     ansBtn.innerHTML=answer.text;
     ansBtn.classList.add ("ans-btn");
-    // ansBtn.style.display = "block";
+    
 ansElement.appendChild(ansBtn);
-
-
+    if(answer.correct){
+        ansBtn.dataset.correct = answer.correct;
+    }
+    ansBtn.addEventListener("click",selectAnswer);
+})
 })
 
+
+const reset = (()=>{
+    nextButton.style.display = "none";
+    while(ansElement.firstChild){
+        ansElement.removeChild(ansElement.firstChild)
+    }
 })
+
+
+
+const selectAnswer = (e) =>{
+
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct == "true";
+    if(isCorrect){
+        selectedBtn.classList.add("correct");
+        // selectedBtn.classList.add("disabled"); // disables hover and click
+
+    }else{
+         selectedBtn.classList.add("incorrect");
+        //  selectedBtn.classList.add("disabled"); // disables hover and click
+
+    }
+}
+
 
 startQuiz();
